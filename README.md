@@ -1,13 +1,7 @@
-# Rent & Shine Jewellery — Rental Website Prototype
+# Rent & Shine — GitHub Pages Catalogue
 
-Open `index.html` in a browser.
+Upload the contents of this `site` folder to the root of your GitHub Pages repository.
 
-Included:
-- Earrings, Necklace Set, Waist Band, Bangles and Forehead Jewellery
-- Gold, Silver, Gold Rodhium and Silver Rodhium filters
-- Rental-price ranges supplied by the client
-- Search, category/polish filtering and rental shortlist counter
-- Responsive mobile layout
-- Hero artwork and luxury jewellery-rental positioning
+`index.html` reads `products.json` and displays the 20 seeded SKUs. The SQLite database is maintained separately in the parent package for local/admin use; GitHub Pages itself cannot write to SQLite.
 
-Note: The reference site was used only for general ecommerce/category inspiration. This prototype does not copy its branding, text or assets.
+For a real multi-user rental database, migrate `schema.sql` to Supabase/Postgres and replace the JSON fetch with the Supabase API.

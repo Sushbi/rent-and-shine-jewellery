@@ -1,123 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rent & Shine Jewellery | Premium Jewellery on Rent</title>
+<title>Rent & Shine Jewellery | Jewellery on Rent</title>
 <style>
-:root{--cream:#fbf6ef;--paper:#fffdf9;--brown:#2d171f;--gold:#b88736;--line:#eadcc9;--muted:#776b67}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--brown);font-family:Arial,Helvetica,sans-serif}
-a{text-decoration:none;color:inherit}button{font:inherit}.top{background:var(--brown);color:#fff;padding:9px 5%;display:flex;justify-content:space-between;font-size:12px;letter-spacing:.3px}
-nav{height:78px;background:#fff;display:flex;align-items:center;gap:34px;padding:0 5%;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}
-.logo{font-family:Georgia,serif;font-size:27px;color:var(--gold);margin-right:auto}.logo small{display:block;color:var(--brown);font:10px Arial;letter-spacing:4px;text-align:center}
-nav a{font-size:13px} .search{border:1px solid var(--line);padding:11px 15px;border-radius:22px;width:190px}
-.hero{min-height:500px;background:linear-gradient(90deg,rgba(40,20,22,.2),rgba(40,20,22,.75)),url('hero.png') center/cover;display:flex;align-items:center;justify-content:flex-end;padding:60px 8%}.heroText{max-width:540px;color:#fff;text-align:center}.hero h1{font:56px Georgia;margin:0 0 14px}.hero p{font:19px Georgia;margin:0 0 25px}.btn{border:1px solid var(--gold);background:var(--brown);color:#fff;padding:13px 25px;border-radius:4px;cursor:pointer}
-.section{padding:58px 5%;max-width:1400px;margin:auto}.title{text-align:center;font:35px Georgia;margin:0 0 8px}.sub{text-align:center;color:var(--muted);margin:0 0 28px}
-.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.cat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px 12px;text-align:center;cursor:pointer}.cat .icon{font-size:44px;margin-bottom:12px}.cat b{display:block;font:17px Georgia}.cat span{font-size:12px;color:var(--muted)}
-.polishes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.polish{min-height:150px;border-radius:12px;padding:28px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(135deg,#9b671d,#e5c47e)}.polish:nth-child(2),.polish:nth-child(3){background:linear-gradient(135deg,#696969,#d4d4d4)}.polish:nth-child(4){background:linear-gradient(135deg,#8d6a2e,#d9b45b)}.polish b{font:25px Georgia}.polish span{font-size:12px;margin-top:5px}
-.toolbar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:25px 0}.pill{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:20px;cursor:pointer}.pill.active{background:var(--brown);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.photo{height:190px;background:linear-gradient(135deg,#f2e0c4,#fff);display:flex;align-items:center;justify-content:center;font-size:80px}.info{padding:15px}.tag{font-size:10px;color:var(--gold);letter-spacing:1px}.info h3{font:18px Georgia;margin:6px 0}.price{font-weight:bold;margin:7px 0 13px}.rent{width:100%;padding:10px;border:0;background:var(--brown);color:#fff;border-radius:5px;cursor:pointer}
-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);font-size:14px}th,td{padding:15px;border:1px solid var(--line);text-align:center}th{background:#f4e8d7;font-family:Georgia}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{background:#fff;padding:25px;text-align:center;border:1px solid var(--line);border-radius:12px}.num{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:auto;font-weight:bold}
-footer{background:var(--brown);color:#fff;padding:35px 5%;display:flex;justify-content:space-between;gap:30px}.cartDrawer{position:fixed;right:18px;bottom:18px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 30px #0002;padding:14px 18px;border-radius:30px;z-index:30}
-@media(max-width:850px){nav{gap:12px}.navlinks{display:none}.hero{justify-content:center}.hero h1{font-size:42px}.categories,.polishes,.grid,.steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.top{display:none}nav{height:65px}.search{width:120px}.categories,.polishes,.grid,.steps{grid-template-columns:1fr}.section{padding:42px 4%}.hero{min-height:450px;padding:30px 5%}}
+:root{--ink:#2d171f;--gold:#b88736;--cream:#fbf6ef;--paper:#fffdfa;--line:#eadcc9;--muted:#756b67}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}button,input{font:inherit}
+.top{background:var(--ink);color:#fff;padding:9px 5%;display:flex;justify-content:space-between;font-size:12px}
+nav{height:78px;background:#fff;display:flex;align-items:center;gap:26px;padding:0 5%;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.logo{font:27px Georgia;color:var(--gold);margin-right:auto}.logo small{display:block;color:var(--ink);font:9px Arial;letter-spacing:4px;text-align:center}
+nav a{font-size:13px}.search{width:210px;padding:10px 15px;border:1px solid var(--line);border-radius:22px}
+.hero{min-height:460px;padding:70px 6%;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(100deg,#f2dfc4,#fffaf4)}
+.hero h1{font:56px Georgia;margin:0 0 12px}.hero p{font:18px Georgia;color:#665b57;margin-bottom:25px}.btn{background:var(--ink);color:#fff;border:0;padding:13px 25px;border-radius:4px;cursor:pointer}
+.wrap{max-width:1450px;margin:auto;padding:55px 5%}.title{text-align:center;font:36px Georgia;margin:0 0 8px}.sub{text-align:center;color:var(--muted);margin:0 0 28px}
+.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.cat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px;cursor:pointer;text-align:center;transition:.2s}.cat:hover{transform:translateY(-3px);box-shadow:0 8px 22px #3a1c1c12}.catimg{height:145px;border-radius:9px;overflow:hidden;background:#f3e6d4;margin-bottom:12px}.catimg img{width:100%;height:100%;object-fit:cover}.cat h3{font:18px Georgia;margin:6px}.cat span{font-size:12px;color:var(--gold)}
+.polishes{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.polish{min-height:150px;border-radius:12px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;cursor:pointer;background:linear-gradient(135deg,#9b671d,#e5c47e)}.polish:nth-child(2),.polish:nth-child(3){background:linear-gradient(135deg,#686868,#d4d4d4)}.polish:nth-child(4){background:linear-gradient(135deg,#8c692d,#d8b65e)}.polish b{font:24px Georgia}.polish small{margin-top:6px}
+.catalog{background:#fff;padding:35px 5%;border-top:1px solid var(--line)}.catalogHead{max-width:1450px;margin:auto;display:flex;align-items:end;justify-content:space-between;gap:20px}.catalogHead h2{font:34px Georgia;margin:0}.activeFilter{color:var(--gold);font-size:13px}
+.filters{max-width:1450px;margin:22px auto;display:flex;gap:9px;flex-wrap:wrap}.pill{padding:9px 15px;border:1px solid var(--line);background:#fff;border-radius:20px;cursor:pointer}.pill.active{background:var(--ink);color:#fff}
+.grid{max-width:1450px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.photo{height:250px;background:#f4e8d8}.photo img{width:100%;height:100%;object-fit:cover}.info{padding:14px}.sku{font-size:11px;color:var(--gold);font-weight:bold;letter-spacing:.5px}.info h3{font:18px Georgia;margin:6px 0}.meta{font-size:12px;color:var(--muted)}.price{font-weight:bold;margin:10px 0 13px}.rent{width:100%;background:var(--ink);color:#fff;border:0;padding:10px;border-radius:4px;cursor:pointer}
+.empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:25px;text-align:center}.num{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:auto;font-weight:bold}
+footer{background:var(--ink);color:#fff;padding:35px 5%;display:flex;justify-content:space-between}
+@media(max-width:950px){.categories{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(3,1fr)}.polishes,.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){nav{gap:10px}.navlinks{display:none}.search{width:150px}.categories,.grid,.polishes,.steps{grid-template-columns:1fr 1fr}.hero h1{font-size:42px}}
+@media(max-width:450px){.categories,.grid,.polishes,.steps{grid-template-columns:1fr}.top{display:none}.catalogHead{display:block}.search{width:125px}}
 </style>
 </head>
 <body>
-<div class="top"><span>🚚 Free shipping on all rental orders</span><span>✦ Premium imitation jewellery · Rent the elegance ✦</span><span>⌖ Delivering across India</span></div>
+<div class="top"><span>🚚 Rental delivery across India</span><span>✦ Premium imitation jewellery on rent ✦</span><span>Easy rental & returns</span></div>
 <nav>
-  <div class="logo">RENT & SHINE<small>JEWELLERY</small></div>
-  <a href="#shop">SHOP</a><a href="#collections">COLLECTIONS</a><a href="#how">HOW IT WORKS</a><a href="#about">ABOUT</a>
-  <input class="search" id="search" placeholder="Search jewellery...">
-  <span>♡</span><span>♙</span><span>🛒 <b id="cartCount">0</b></span>
+<div class="logo">RENT & SHINE<small>JEWELLERY</small></div>
+<a href="#categories">SHOP</a><a href="#polishes">POLISH</a><a href="#how">HOW IT WORKS</a>
+<input class="search" id="search" placeholder="Search SKU or jewellery…">
+<span>🛒 <b id="cart">0</b></span>
 </nav>
 
 <section class="hero">
- <div class="heroText"><h1>LOOK ROYAL.<br>PAY SMALL.</h1><p>Premium imitation jewellery on rent for weddings, festivals and every special occasion.</p><button class="btn" onclick="document.querySelector('#shop').scrollIntoView()">EXPLORE COLLECTION</button></div>
+<div><h1>LOOK ROYAL.<br>PAY SMALL.</h1><p>Premium imitation jewellery for weddings, festivals and every special occasion.</p><button class="btn" onclick="document.querySelector('#categories').scrollIntoView({behavior:'smooth'})">EXPLORE COLLECTION</button></div>
 </section>
 
-<section class="section">
- <h2 class="title">SHOP BY CATEGORY</h2><p class="sub">Pick the jewellery you need. Rent it. Shine. Return it.</p>
- <div class="categories">
-  <div class="cat" onclick="filterCat('Earrings')"><div class="icon">◈</div><b>Earrings</b><span>Rent Now →</span></div>
-  <div class="cat" onclick="filterCat('Necklace Set')"><div class="icon">✧</div><b>Necklace Set</b><span>Rent Now →</span></div>
-  <div class="cat" onclick="filterCat('Waist Band')"><div class="icon">◉</div><b>Waist Band</b><span>Rent Now →</span></div>
-  <div class="cat" onclick="filterCat('Bangles')"><div class="icon">◌</div><b>Bangles</b><span>Rent Now →</span></div>
-  <div class="cat" onclick="filterCat('Forehead Jewellery')"><div class="icon">✦</div><b>Forehead Jewellery</b><span>Rent Now →</span></div>
- </div>
+<section class="wrap" id="categories">
+<h2 class="title">SHOP BY CATEGORY</h2><p class="sub">Click a category to see every available SKU in that jewellery type.</p>
+<div class="categories">
+<div class="cat" onclick="filterCategory('Earrings')"><div class="catimg"><img src="images/catalog_01.jpg" alt="Earrings"></div><h3>Earrings</h3><span>View all earrings →</span></div>
+<div class="cat" onclick="filterCategory('Necklace Set')"><div class="catimg"><img src="images/catalog_02.jpg" alt="Necklace sets"></div><h3>Necklace Sets</h3><span>View all necklace sets →</span></div>
+<div class="cat" onclick="filterCategory('Waist Band')"><div class="catimg"><img src="images/catalog_03.jpg" alt="Waist bands"></div><h3>Waist Bands</h3><span>View all waist bands →</span></div>
+<div class="cat" onclick="filterCategory('Bangles')"><div class="catimg"><img src="images/catalog_04.jpg" alt="Bangles"></div><h3>Bangles</h3><span>View all bangles →</span></div>
+<div class="cat" onclick="filterCategory('Forehead Jewellery')"><div class="catimg"><img src="images/catalog_05.jpg" alt="Forehead jewellery"></div><h3>Forehead Jewellery</h3><span>View all →</span></div>
+</div>
 </section>
 
-<section class="section" id="collections">
- <h2 class="title">SHOP BY POLISH</h2><p class="sub">Choose the finish that matches your outfit.</p>
- <div class="polishes">
-  <div class="polish" onclick="filterPolish('Gold')"><b>GOLD</b><span>Timeless & Traditional</span></div>
-  <div class="polish" onclick="filterPolish('Silver')"><b>SILVER</b><span>Classic & Elegant</span></div>
-  <div class="polish" onclick="filterPolish('Silver Rodhium')"><b>SILVER RODHIUM</b><span>Shine with sophistication</span></div>
-  <div class="polish" onclick="filterPolish('Gold Rodhium')"><b>GOLD RODHIUM</b><span>Luxury with a modern touch</span></div>
- </div>
+<section class="wrap" id="polishes">
+<h2 class="title">SHOP BY POLISH</h2><p class="sub">Filter the catalogue by finish.</p>
+<div class="polishes">
+<div class="polish" onclick="filterPolish('Gold')"><b>GOLD</b><small>Timeless & Traditional</small></div>
+<div class="polish" onclick="filterPolish('Silver')"><b>SILVER</b><small>Classic & Elegant</small></div>
+<div class="polish" onclick="filterPolish('Silver Rhodium')"><b>SILVER RHODIUM</b><small>Cool, bright finish</small></div>
+<div class="polish" onclick="filterPolish('Gold Rhodium')"><b>GOLD RHODIUM</b><small>Modern luxury</small></div>
+</div>
 </section>
 
-<section class="section" id="shop">
- <h2 class="title">RENTAL COLLECTION</h2><p class="sub">Prices shown are rental prices per booking period.</p>
- <div class="toolbar" id="filters">
-  <button class="pill active" onclick="filterPolish('All')">All</button>
-  <button class="pill" onclick="filterPolish('Gold')">Gold</button><button class="pill" onclick="filterPolish('Silver')">Silver</button>
-  <button class="pill" onclick="filterPolish('Gold Rodhium')">Gold Rodhium</button><button class="pill" onclick="filterPolish('Silver Rodhium')">Silver Rodhium</button>
- </div>
- <div class="toolbar">
-  <button class="pill" onclick="filterCat('All')">All Categories</button><button class="pill" onclick="filterCat('Bangles')">Bangles</button><button class="pill" onclick="filterCat('Necklace Set')">Necklace Set</button><button class="pill" onclick="filterCat('Waist Band')">Waist Band</button><button class="pill" onclick="filterCat('Forehead Jewellery')">Forehead Jewellery</button>
- </div>
- <div class="grid" id="products"></div>
+<section class="catalog" id="catalog">
+<div class="catalogHead"><div><h2>RENTAL COLLECTION</h2><div class="activeFilter" id="activeFilter">Showing all jewellery</div></div><button class="pill" onclick="clearFilters()">Clear filters</button></div>
+<div class="filters">
+<button class="pill active" onclick="filterPolish('All')">All</button>
+<button class="pill" onclick="filterPolish('Gold')">Gold</button><button class="pill" onclick="filterPolish('Silver')">Silver</button><button class="pill" onclick="filterPolish('Gold Rhodium')">Gold Rhodium</button><button class="pill" onclick="filterPolish('Silver Rhodium')">Silver Rhodium</button>
+<button class="pill" onclick="filterCategory('Earrings')">Earrings</button><button class="pill" onclick="filterCategory('Necklace Set')">Necklace Sets</button><button class="pill" onclick="filterCategory('Waist Band')">Waist Bands</button><button class="pill" onclick="filterCategory('Bangles')">Bangles</button><button class="pill" onclick="filterCategory('Forehead Jewellery')">Forehead Jewellery</button>
+</div>
+<div class="grid" id="products"></div>
 </section>
 
-<section class="section">
- <h2 class="title">RENTAL PRICE GUIDE</h2><p class="sub">Your requested pricing structure, built into the storefront.</p>
- <table><thead><tr><th>Polish</th><th>Bangles</th><th>Necklace Set</th><th>Waist Band</th><th>Forehead Jewellery</th></tr></thead>
- <tbody>
- <tr><td>Gold</td><td>₹1,500–₹1,700</td><td>₹4,000–₹5,500</td><td>₹1,500–₹1,800</td><td>₹600–₹800</td></tr>
- <tr><td>Silver</td><td>₹1,000–₹1,500</td><td>₹3,500–₹4,000</td><td>₹1,200–₹1,500</td><td>₹400–₹600</td></tr>
- <tr><td>Gold Rodhium</td><td>₹1,300–₹1,500</td><td>₹3,500–₹5,000</td><td>₹1,500–₹1,700</td><td>₹600–₹800</td></tr>
- <tr><td>Silver Rodhium</td><td>₹800–₹1,500</td><td>₹2,500–₹4,000</td><td>₹1,000–₹1,500</td><td>₹400–₹600</td></tr>
- </tbody></table>
+<section class="wrap" id="how">
+<h2 class="title">HOW IT WORKS</h2><p class="sub">Choose → Reserve → Shine → Return</p>
+<div class="steps"><div class="step"><div class="num">1</div><h3>Choose</h3><p>Pick your jewellery and polish.</p></div><div class="step"><div class="num">2</div><h3>Reserve</h3><p>Select your rental dates.</p></div><div class="step"><div class="num">3</div><h3>Shine</h3><p>Wear it for your occasion.</p></div><div class="step"><div class="num">4</div><h3>Return</h3><p>Return after your event.</p></div></div>
 </section>
 
-<section class="section" id="how">
- <h2 class="title">HOW IT WORKS</h2><p class="sub">Luxury jewellery without the purchase price.</p>
- <div class="steps"><div class="step"><div class="num">1</div><h3>Choose</h3><p>Pick your favourite jewellery.</p></div><div class="step"><div class="num">2</div><h3>Reserve</h3><p>Select your occasion and rental dates.</p></div><div class="step"><div class="num">3</div><h3>Shine</h3><p>Wear it for your special day.</p></div><div class="step"><div class="num">4</div><h3>Return</h3><p>Return it after your event.</p></div></div>
-</section>
-
-<section class="section" id="about">
- <h2 class="title">WHY RENT WITH US?</h2><p class="sub">A simple rental model for high-impact jewellery.</p>
- <div class="steps"><div class="step">✦<h3>Premium Finish</h3><p>Curated imitation pieces maintained for repeated rentals.</p></div><div class="step">₹<h3>Affordable Luxury</h3><p>Wear statement pieces without buying them.</p></div><div class="step">✓<h3>Easy Returns</h3><p>Simple return process after your event.</p></div><div class="step">☎<h3>Dedicated Support</h3><p>Help with selection, sizing and rental questions.</p></div></div>
-</section>
-
-<footer><div><b>RENT & SHINE JEWELLERY</b><p>Premium imitation jewellery on rent.</p></div><div>WhatsApp · Instagram · Contact Us</div><div>© 2026 Rent & Shine</div></footer>
-<div class="cartDrawer">🛒 <span id="cartText">0 items selected</span></div>
+<footer><b>RENT & SHINE JEWELLERY</b><span>Premium imitation jewellery on rent</span><span>WhatsApp · Instagram · Contact</span></footer>
 
 <script>
-const ranges={
-Gold:{Bangles:[1500,1700],"Necklace Set":[4000,5500],"Waist Band":[1500,1800],"Forehead Jewellery":[600,800]},
-Silver:{Bangles:[1000,1500],"Necklace Set":[3500,4000],"Waist Band":[1200,1500],"Forehead Jewellery":[400,600]},
-"Gold Rodhium":{Bangles:[1300,1500],"Necklace Set":[3500,5000],"Waist Band":[1500,1700],"Forehead Jewellery":[600,800]},
-"Silver Rodhium":{Bangles:[800,1500],"Necklace Set":[2500,4000],"Waist Band":[1000,1500],"Forehead Jewellery":[400,600]}
-};
-const products=[];
-for(const polish of Object.keys(ranges)) for(const cat of Object.keys(ranges[polish])){
-  let [a,b]=ranges[polish][cat];
-  products.push({name:`${polish} ${cat}`,polish,cat,a,b});
-}
-let selectedPolish='All',selectedCat='All',cart=0;
-function money(n){return '₹'+n.toLocaleString('en-IN')}
+let products=[],polish='All',category='All',cart=0;
+const money=n=>n==null?'Price TBD':'₹'+Number(n).toLocaleString('en-IN');
+async function init(){products=await (await fetch('products.json')).json();render();}
 function render(){
- const q=(document.getElementById('search').value||'').toLowerCase();
- const list=products.filter(p=>(selectedPolish==='All'||p.polish===selectedPolish)&&(selectedCat==='All'||p.cat===selectedCat)&&p.name.toLowerCase().includes(q));
- document.getElementById('products').innerHTML=list.map((p,i)=>`<article class="product"><div class="photo">${p.cat==='Bangles'?'◌':p.cat==='Necklace Set'?'✧':p.cat==='Waist Band'?'◉':p.cat==='Forehead Jewellery'?'✦':'◈'}</div><div class="info"><span class="tag">${p.polish.toUpperCase()}</span><h3>${p.cat}</h3><div class="price">${money(p.a)} – ${money(p.b)}</div><button class="rent" onclick="addCart('${p.name.replace(/'/g,"\\'")}')">RENT NOW</button></div></article>`).join('');
+ const q=document.getElementById('search').value.toLowerCase();
+ let rows=products.filter(p=>(polish==='All'||p.polish===polish)&&(category==='All'||p.category===category)&&(`${p.sku} ${p.name} ${p.category} ${p.polish}`).toLowerCase().includes(q));
+ document.getElementById('activeFilter').textContent=`${rows.length} SKU${rows.length===1?'':'s'} · ${category==='All'?'All categories':category}${polish==='All'?'':' · '+polish}`;
+ document.getElementById('products').innerHTML=rows.length?rows.map(p=>`<article class="card"><div class="photo"><img src="${p.image}" alt="${p.name} ${p.sku}"></div><div class="info"><div class="sku">${p.sku}</div><h3>${p.category}</h3><div class="meta">${p.polish} · ${p.name}</div><div class="price">${money(p.rental_price_min)} – ${money(p.rental_price_max)} / ${p.rental_period_days} days</div><button class="rent" onclick="add('${p.sku}')">RENT NOW</button></div></article>`).join(''):`<div class="empty">No jewellery matches these filters.</div>`;
 }
-function filterPolish(v){selectedPolish=v;render();document.querySelector('#shop').scrollIntoView({behavior:'smooth'})}
-function filterCat(v){selectedCat=v;render();document.querySelector('#shop').scrollIntoView({behavior:'smooth'})}
-function addCart(name){cart++;document.getElementById('cartCount').textContent=cart;document.getElementById('cartText').textContent=cart+' item'+(cart>1?'s':'')+' selected';alert(name+' added to your rental shortlist.')}
-document.getElementById('search').addEventListener('input',render);render();
+function filterCategory(v){category=v;document.getElementById('catalog').scrollIntoView({behavior:'smooth'});render();}
+function filterPolish(v){polish=v;document.getElementById('catalog').scrollIntoView({behavior:'smooth'});render();}
+function clearFilters(){polish='All';category='All';document.getElementById('search').value='';render();}
+function add(sku){cart++;document.getElementById('cart').textContent=cart;alert(`${sku} added to your rental shortlist.`);}
+document.getElementById('search').addEventListener('input',render);init();
 </script>
 </body>
 </html>
